@@ -7,7 +7,7 @@
 *                            *
 *****************************/
 
-cd "C:\Dropbox\學習\碩士\碩論"
+cd "C:\Dropbox\學習\碩士\碩論\TYP_Sleep-Emo"
 	 
 /*****************************************
 *                                        *
@@ -16,7 +16,7 @@ est clear
 
 do "20 model\10 clean\31 keep_240405.do"
 
-
+save "10 data\TYPSleep_analysis.dta", replace
 
 reshape long ///
 weekdayST_w weekendST_w ///
@@ -25,8 +25,6 @@ happy_w dep_w ///
 , i(id1) j(wave)
 
 ren *_w *
-
-save "10 data\TYPSleep_analysis", replace
          
 lab var weekdayST "平日睡眠時間"
 lab var weekendST "假日睡眠時間"
@@ -41,7 +39,7 @@ lab var happy "快樂情緒1-4"
 lab var dep "憂鬱情緒1-5"
 
 
-save "10 data\TYPSleepLong_analysis", replace
+save "10 data\TYPSleepLong_analysis.dta", replace
 
 
 sem (TST_w2 -> TST_w3, ) (TST_w2 -> dep_w3, ) (TST_w3 -> TST_w5, ) ///
