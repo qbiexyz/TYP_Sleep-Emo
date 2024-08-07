@@ -17,9 +17,9 @@ use "10 data\TYPSleepHappy9m_analysis.dta", clear
 
 drop x4 y4 z4
 
-
-
 sum x* y* z* 
+
+ci means x* y* z* 
 
 tab1 male agey peduc urban
 
